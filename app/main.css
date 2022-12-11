@@ -157,6 +157,11 @@ i {
   background-color: var(--gray-primary);
 }
 
+.fintech_navigation_item:hover {
+  outline: 1px solid rgba(222, 248, 111, 0.4);
+  transition: all ease-in-out 200ms;
+}
+
 .fintech_navigation_item i {
   font-size: 1.5rem;
 }
