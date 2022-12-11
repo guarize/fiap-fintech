@@ -1,7 +1,12 @@
+body {
+  min-height: 100vh;
+  background-color: var(--black-background);
+}
+
 h3 {
   color: white;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 1.5rem;
 }
 
 h4 {
@@ -13,43 +18,91 @@ i {
 }
 
 .app_main {
-  min-height: 100vh;
-  background-color: var(--black-background);
+  padding: 0 1.5rem 7rem;
+  width: 100%;
 }
 
-.main-header {
+.main_header {
   padding: 2rem 2.5rem;
   width: 100%;
   background: var(--gray-primary);
   border-radius: 0 0 1rem 1rem;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  margin-bottom: 1rem;
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+  margin-bottom: 2rem;
 }
 
-.main-header_top-info {
+.main_footer {
+  position: fixed;
+  bottom: 0;
+  background-color: var(--gray-primary);
+  padding: 1rem 2.5rem 0;
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main_footer_navigation {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20%;
+}
+
+.footer_navigation_item {
+  padding-bottom: 0.5rem;
+  width: fit-content;
+}
+
+.footer_navigation_item i {
+  padding-bottom: 0.625rem;
+  color: var(--gray-secondary);
+}
+
+.footer_navigation_item i:hover {
+  padding-bottom: 0.625rem;
+  color: white;
+  transition: all ease-in-out 200ms;
+}
+
+.footer_navigation_item-selected i {
+  border-bottom: 1px solid var(--green-primary);
+  border-width: 0.125rem;
+  color: var(--green-primary) !important;
+}
+
+.main_footer i {
+  font-size: 1.5rem;
+  color: var(--gray-tertiary);
+  cursor: pointer;
+}
+
+.main_header_top-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.5rem;
 }
 
-.main-header-top-info_icons {
+.main_header_top-info_icons {
   display: flex;
   align-items: center;
   gap: 1.3rem;
 }
 
-.main-header-top-info_icons i {
+.main_header_top-info_icons i {
   font-size: 1.3rem;
   cursor: pointer;
 }
 
-.main-header-top-info_icons i:hover {
+.main_header_top-info_icons i:hover {
   color: var(--green-primary);
   transition: all ease-in-out 200ms;
 }
 
-.main-header_balance {
+.main_header_balance {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -57,26 +110,221 @@ i {
   gap: 1rem;
 }
 
-.main-header_balance h1 {
+.main_header_balance h1 {
   font-weight: 700;
   line-height: 2.75rem;
 }
 
-.main-header_balance div {
+.main_header_balance div {
   display: flex;
   align-items: center;
   gap: 0.875rem;
 }
 
-.main-header_balance i {
+.main_header_balance i {
   font-size: 1.5rem;
   cursor: pointer;
   margin-top: -0.25rem;
 }
 
-.main-header_balance a {
+.main_header_balance a {
   font-weight: 700;
   line-height: 1.5rem;
   text-decoration-line: underline;
   color: white;
+}
+
+.fintech_navigation {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 4em;
+}
+
+.fintech_navigation_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  background-color: var(--gray-primary);
+}
+
+.fintech_navigation_item i {
+  font-size: 1.5rem;
+}
+
+.fintech_navigation_item p {
+  font-size: 1rem;
+  color: white;
+  margin: 0;
+}
+
+.fintech_month-balance {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  padding: 2rem 0.2rem 0.2rem;
+  border-radius: 0.25rem;
+  background-color: var(--gray-primary);
+  margin-bottom: 2.5rem;
+}
+
+.fintech_month-balance_info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 1.5rem;
+  gap: 1rem;
+}
+
+.fintech_month-balance_info h4 {
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.fintech_month-balance_info h3 {
+  color: var(--green-primary);
+}
+
+.fintech_month-balance_amount {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.fintech_month-balance_amount div {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.fintech_month-balance_amount p {
+  color: white;
+  font-weight: 700;
+}
+
+.fintech_month-balance_history {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--black-background);
+  width: 100%;
+  padding: 1rem;
+}
+
+.fintech_month-balance_history a {
+  text-align: center;
+  font-weight: 700;
+  line-height: 20px;
+  text-decoration-line: underline;
+  color: white;
+}
+
+.fintech_credit-card {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  padding: 2rem 0.2rem 0.2rem;
+  border-radius: 0.25rem;
+  background-color: var(--gray-primary);
+}
+
+.fintech_credit-card_info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  width: 100%;
+  gap: 0.5rem;
+  padding: 0 1.5rem;
+}
+
+.fintech_credit-card_info h4 {
+  font-weight: 700;
+  margin: 0;
+}
+
+.fintech_credit-card_info h3 {
+  color: var(--green-primary);
+}
+
+.fintech_credit-card_info p {
+  color: white;
+  margin: 0;
+}
+
+.fintech_credit-card_amount span {
+  letter-spacing: 4px;
+  font-size: 0.6rem;
+  padding: 0 0.5rem;
+}
+
+.fintech_credit-card_amount p {
+  display: flex;
+  align-items: center;
+}
+
+.fintech_credit-card_amount {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.fintech_credit-card_amount div {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.fintech_credit-card_amount p {
+  color: white;
+  font-weight: 700;
+}
+
+.fintech_credit-card_details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--black-background);
+  width: 100%;
+  padding: 1rem;
+}
+
+.fintech_credit-card_details a {
+  text-align: center;
+  font-weight: 700;
+  line-height: 20px;
+  text-decoration-line: underline;
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .fintech_navigation {
+    gap: 1rem;
+  }
+
+  .fintech_navigation_item {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .fintech_month-balance_amount div {
+    gap: 2rem;
+  }
 }
