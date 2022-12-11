@@ -11,7 +11,9 @@
   flex-direction: column;
   align-items: start;
   height: 100%;
-  margin-top: -5rem;
+  margin-top: -2rem;
+  width: calc(100% - 30%);
+  max-width: 30rem;
 }
 
 .container_login-form {
@@ -19,11 +21,12 @@
 }
 
 .container_login-form__inputs {
+  flex-shrink: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1.25rem;
-  width: 100%;
+  flex-grow: 100;
   margin-top: 1.5rem;
 }
 
@@ -34,6 +37,20 @@
   flex-direction: column;
   align-items: center;
   margin-top: 0.875rem;
+}
+
+.container_login-form__submit p {
+  color: var(--gray-secondary);
+  margin-top: 2rem;
+}
+
+.container_login-form__submit a {
+  color: white;
+}
+
+.container_login-form__submit a:hover {
+  text-decoration: underline;
+  transition: all ease-in-out 200ms;
 }
 
 .container-login-form__reset-password:hover {
@@ -59,4 +76,38 @@
 .container-login-form__button:disabled {
   background-color: rgba(222, 248, 111, 0.5);
   pointer-events: none;
+}
+
+.login_form_password-validation {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 0.2rem;
+  margin-top: 2rem;
+}
+
+.login_form_password-validation div {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.login_form_password-validation p {
+  color: var(--gray-secondary);
+  display: inline;
+}
+
+.login_form_password-validation i {
+  color: var(--gray-secondary);
+  font-size: 1rem;
+}
+
+.login_form_password-validation .bi-check-circle {
+  color: var(--green-primary);
+  font-size: 1rem;
+}
+
+.login_form_password-validation .bi-x-circle {
+  color: var(--red-primary);
+  font-size: 1rem;
 }
