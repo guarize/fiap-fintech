@@ -9,21 +9,44 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="grid.css" />
+    <link rel="stylesheet" href="core.css" />
     <title>Login - Fintech</title>
   </head>
   <body>
-    <main>
-      <div>
+    <main class="main">
+      <form class="container_login">
         <h1>Entrar</h1>
         <h2>Bem vindo de volta.</h2>
-      </div>
+
+        <div class="container_login-form">
+          <div class="container_login-form__inputs">
+            <input type="text" placeholder="Email" />
+            <input type="text" placeholder="Senha" />
+          </div>
+
+          <div class="container_login-form__submit">
+            <a href="#" class="container-login-form__reset-password"
+              >Esqueceu a senha?</a
+            >
+
+            <a href="./screens/main.html">
+              <button type="button" class="container-login-form__button">
+                Entrar
+              </button>
+            </a>
+          </div>
+        </div>
+      </form>
     </main>
 
+    <script src="./script.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap');
+    </style>
   </body>
 </html>
